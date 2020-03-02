@@ -2,12 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 
-#save model
-
-#print the accuracy and loss
-value_loss, value_acc = model.evaluate(x_test,y_test)
-print(value_loss,value_acc) #too much means underfit, too little overfit
-
 new_model = tf.keras.models.load_model("num_reader.model")
 predictions = new_model.predict(x_test)
 
